@@ -28,18 +28,4 @@ export const Home = () => {
 		</>
 	);
 };
-
-// export const getServerSideProps = async pageContext => {
-// 	const apiResponse = await fetch(
-// 		'https://my-json-server.typicode.com/portexe/next-news/employeeOfTheMonth',
-// 	);
-// 	const employee = await apiResponse.json();
-//
-// 	return {
-// 		props: {
-// 			employee,
-// 		},
-// 	};
-// };
-
 export default Home;

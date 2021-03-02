@@ -7,8 +7,8 @@ export const Toolbar = () => {
 	return (
 		<div className={styles.main}>
 			<div onClick={() => router.push('/')}>Home</div>
-			<div onClick={() => router.push('/feed/1')}>Touch</div>
-			<div onClick={() => router.push('/eom')}>Dokaben</div>
+			<div onClick={() => router.push('/touch')}>Touch</div>
+			<div onClick={() => router.push('/dokaben')}>Dokaben</div>
 		</div>
 	);
 };
