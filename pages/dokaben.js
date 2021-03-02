@@ -2,7 +2,7 @@ import Head from 'next/head';
 import styles from '../styles/EOM.module.css';
 import {Toolbar} from '../components/toolbar';
 
-export const Dokaben = ({employee}) => {
+export const Dokaben = () => {
 	return (
 		<>
 			<Head>
