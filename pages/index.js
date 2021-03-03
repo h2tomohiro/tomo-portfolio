@@ -2,6 +2,8 @@ import Head from 'next/head';
 import styles from '../styles/EOM.module.css';
 import {Toolbar} from '../components/toolbar';
 import {useRouter} from 'next/router';
+import {Header} from "../components/header";
+import {Footer} from "../components/footer";
 
 export const Home = () => {
 	const router = useRouter();
@@ -11,7 +13,7 @@ export const Home = () => {
 				<title>I love Baseball "MANGA"</title>
 			</Head>
 			<div className="page-container">
-				<Toolbar/>
+				<Header/>
 				<div className={styles.main}>
 					<h1>I love Baseball MANGA!</h1>
 					<h2>I highly recommend you the following two Baseball MANGA!</h2>
@@ -30,6 +32,7 @@ export const Home = () => {
 					</div>
 				</div>
 			</div>
+			<Footer/>
 		</>
 	);
 };

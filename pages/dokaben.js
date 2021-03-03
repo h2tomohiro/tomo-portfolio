@@ -1,6 +1,8 @@
 import Head from 'next/head';
 import styles from '../styles/EOM.module.css';
 import {Toolbar} from '../components/toolbar';
+import {Header} from "../components/header";
+import {Footer} from "../components/footer";
 
 export const Dokaben = () => {
 	return (
@@ -10,7 +12,7 @@ export const Dokaben = () => {
 			</Head>
 
 			<div className="page-container">
-				<Toolbar/>
+				<Header/>
 				<div>
 					<iframe
 						width="312"
@@ -21,6 +23,8 @@ export const Dokaben = () => {
 						OP1 ｢がんばれドカベン｣</a></iframe>
 				</div>
 			</div>
+
+			<Footer/>
 		</>
 	);
 };
