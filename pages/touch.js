@@ -1,8 +1,23 @@
 import Head from 'next/head';
+import React from 'react'
+import {useState, useEffect} from 'react';
 import {Header} from '../components/header';
 import {Footer} from "../components/footer";
+import {MangaCard} from "../components/MangaCard";
 
 export const Touch = () => {
+	const [topTouch, SetTouch] = useState([]);
+
+	const GetTouchAnime = async () => {
+		const temp = await fetch('https://api.jikan.moe/v3/search/manga?q=touch&page=1&limit=2')
+			.then(res => res.json());
+		SetTouch(temp.results.slice(1,2));
+	}
+
+	useEffect(() => {
+		GetTouchAnime();
+	}, []);
+
 	return (
 		<>
 			<Head>
@@ -10,11 +25,22 @@ export const Touch = () => {
 			</Head>
 			<div className="page-container">
 				<Header/>
-				<div className="embed-responsive embed-responsive-16by9">
-					<iframe className="embed-responsive-item" src="https://www.youtube.com/embed/Bm1n0zF0yEk" frameBorder="0"
-									allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-									allowFullScreen></iframe>
-				</div>
+				<aside>
+					<nav>
+						{topTouch.map(manga => (
+							<MangaCard
+								manga={manga}
+								key={manga.mal_id}/>
+						))}
+					</nav>
+				</aside>
+				<iframe
+					width="380"
+					height="220"
+					src="https://www.youtube.com/embed/Bm1n0zF0yEk"
+					scrolling="no"
+					frameBorder="0">
+				</iframe>
 			</div>
 			<Footer/>
 		</>
