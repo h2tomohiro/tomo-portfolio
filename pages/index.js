@@ -1,6 +1,5 @@
 import Head from 'next/head';
-import styles from '../styles/EOM.module.css';
-import {Toolbar} from '../components/toolbar';
+import styles from '../styles/common.module.scss';
 import {useRouter} from 'next/router';
 import {Header} from "../components/header";
 import {Footer} from "../components/footer";
@@ -17,12 +16,14 @@ export const Home = () => {
 				<div className={styles.main}>
 					<h1>I love Baseball MANGA!</h1>
 					<h2>I highly recommend you the following two Baseball MANGA!</h2>
-					<div>
-						<div>
+					<div className="boxContainer">
+						<div className="box">
 							<h3>Touch</h3>
 							<div onClick={() => router.push('/touch')}>
 								<img src='https://cdn.myanimelist.net//images//manga//5//84777.jpg'/>
 							</div>
+						</div>
+						<div className="box">
 							<h3>Dokaben</h3>
 							<div onClick={() => router.push('/dokaben')}>
 								<img
