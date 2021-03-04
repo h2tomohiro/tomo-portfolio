@@ -1,13 +1,13 @@
 import 'bootstrap/dist/css/bootstrap.css';
 import React, { useState } from 'react';
+import {useRouter} from 'next/router';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
-import {MangaCard} from "./MangaCard";
 
 export const ModalArea = ({test}) => {
 	const [modal, setModal] = useState(false);
 	const toggle = () => setModal(!modal);
 	const clicked = () => modalAction();
-
+	const router = useRouter();
 	return (
 		<div>
 			<div className="mb-2">
@@ -28,6 +28,7 @@ export const ModalArea = ({test}) => {
 				  <figure>
 					  <img
 						  src={ test.image_url}
+							key={ test.mal_id }
 						  alt=""/>
 						<p>
 							<b>Review Score</b><br/> { test.score}
@@ -44,8 +45,11 @@ export const ModalArea = ({test}) => {
 					</figure>
 				</ModalBody>
 				<ModalFooter>
-					<Button color="primary"
-									className="mb-3 btn-sm"
+					<Button
+						onClick={() => router.push(test.url)}
+						key={test.mal_id}
+						color="primary"
+						className="mb-3 btn-sm"
 									>Go to Website
 					</Button>
 					<Button color="secondary"

@@ -15,7 +15,7 @@ export const Home = () => {
 			<div className="page-container">
 				<Header/>
 				<div className={styles.main}>
-					<h2 className={styles.subtitle}>I highly recommend you the following two Baseball MANGA!</h2>
+					<h4 className={styles.main}>I highly recommend you the following two Baseball MANGA!</h4>
 					<div className="boxContainer">
 						<div className="box">
 							<div onClick={() => router.push('/touch')}>

@@ -11,6 +11,7 @@ export const MangaCard = ({manga}) => {
 				<figure>
 					<img
 						src={manga.image_url}
+						key={manga.mal_id }
 						alt=""/>
 				</figure>
 			</a>
