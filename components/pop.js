@@ -1,6 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.css';
 import React, { useState } from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+import {MangaCard} from "./MangaCard";
 
 export const ModalArea = ({test}) => {
 	const [modal, setModal] = useState(false);
@@ -9,16 +10,18 @@ export const ModalArea = ({test}) => {
 
 	return (
 		<div>
+			<div className="mb-2">
 			<Button
-				block
-				className="mb-3 btn-sm"
+				variant="primary"
+				size="lg"
 				color="primary"
 				onClick={() => setModalDefaultOpen(true)}
 				type="button"
 				onClick={toggle}
 			>
-			  Detail information
+			  Check Information
 			</Button>
+			</div>
 			<Modal isOpen={modal} toggle={toggle}>
 				<ModalHeader toggle={toggle}>{ test.title }</ModalHeader>
 				<ModalBody>
@@ -26,12 +29,28 @@ export const ModalArea = ({test}) => {
 					  <img
 						  src={ test.image_url}
 						  alt=""/>
-				  </figure>
+						<p>
+							<b>Review Score</b><br/> { test.score}
+						</p>
+						<p>
+							<b>Synopsis</b><br/> { test.synopsis}
+						</p>
+						<p>
+							<b>Srat Date</b><br/> { test.start_date}
+						</p>
+						<p>
+							<b>End Date</b><br/> { test.end_date}
+						</p>
+					</figure>
 				</ModalBody>
 				<ModalFooter>
+					<Button color="primary"
+									className="mb-3 btn-sm"
+									>Go to Website
+					</Button>
 					<Button color="secondary"
 									className="mb-3 btn-sm"
-									onClick={toggle}>閉じる
+									onClick={toggle}>Close
 					</Button>
 				</ModalFooter>
 			</Modal>
