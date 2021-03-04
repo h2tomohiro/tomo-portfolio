@@ -4,7 +4,6 @@ import {useState, useEffect} from 'react';
 import {Header} from '../components/header';
 import {Footer} from "../components/footer";
 import {MangaCard} from "../components/MangaCard";
-import {ModalArea} from "../components/pop";
 
 export const Touch = () => {
 	const [topTouch, SetTouch] = useState([]);
@@ -12,7 +11,7 @@ export const Touch = () => {
 	const GetTouchAnime = async () => {
 		const temp = await fetch('https://api.jikan.moe/v3/search/manga?q=touch&page=1&limit=2')
 			.then(res => res.json());
-		SetTouch(temp.results.slice(1,2));
+		SetTouch(temp.results.slice(1, 2));
 	}
 
 	useEffect(() => {
@@ -32,16 +31,6 @@ export const Touch = () => {
 							<MangaCard
 								manga={manga}
 								key={manga.mal_id}/>
-						// {topTouch.map(test => (
-						// 	<ModalArea
-						// 		test={test}
-						// 		key={test.mal_id}
-						// 		// buttonName="投稿する"
-						// 		// props={props}
-						// 		// modalBody="入力した内容で投稿しますか？"
-						// 		// // message={this.state.message}
-						// 		// // color={this.state.color}
-						// 	/>
 						))}
 					</nav>
 				</aside>

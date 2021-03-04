@@ -4,7 +4,6 @@ import {useState, useEffect} from 'react';
 import {Header} from "../components/header";
 import {Footer} from "../components/footer";
 import {MangaCard} from "../components/MangaCard";
-import {ModalArea} from "../components/pop";
 
 export const Dokaben = () => {
 	const [Dokaben, SetDokaben] = useState([]);
