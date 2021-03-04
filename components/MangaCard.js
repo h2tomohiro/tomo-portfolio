@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '../styles/Toolbar.module.scss';
+
 export const MangaCard = ({manga}) => {
 	return (
 		<article className="manga-card">

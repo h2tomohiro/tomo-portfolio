@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import styles from '../styles/common.module.scss';
+import styles from '../styles/index.module.scss';
 import {useRouter} from 'next/router';
 import {Header} from "../components/header";
 import {Footer} from "../components/footer";
@@ -10,6 +10,7 @@ export const Home = () => {
 		<>
 			<Head>
 				<title>I love Baseball "MANGA"</title>
+				<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet" />
 			</Head>
 			<div className="page-container">
 				<Header/>

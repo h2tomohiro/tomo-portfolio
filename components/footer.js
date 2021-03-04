@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from "../styles/Toolbar.module.scss";
+import styles from "../styles/menubar.module.scss";
 
 export const Footer = ({children}) => {
 	const footer = () => (

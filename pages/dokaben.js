@@ -6,23 +6,16 @@ import {Footer} from "../components/footer";
 import {MangaCard} from "../components/MangaCard";
 
 export const Dokaben = () => {
-	// const [animeList, SetAnimeList] = useState([]);
-	const [topAnime, SetTopAnime] = useState([]);
-	// const [search, SetSearch] = useState("");
+	const [Dokaben, SetDokaben] = useState([]);
 
-	const GetTopAnime = async () => {
+	const GetDokaben = async () => {
 		const temp = await fetch('https://api.jikan.moe/v3/search/manga?q=dokaben&page=1&limit=5')
 			.then(res => res.json());
-		SetTopAnime(temp.results);
+		SetDokaben(temp.results);
 	}
 
-	// const HandeleSearch = e => {
-	// 	e.preventDefault();
-	// 	console
-	// }
-
 	useEffect(() => {
-		GetTopAnime();
+		GetDokaben();
 	}, []);
 
 	return (
@@ -34,7 +27,7 @@ export const Dokaben = () => {
 				<Header/>
 				<aside>
 					<nav>
-						{topAnime.map(manga => (
+						{Dokaben.map(manga => (
 							<MangaCard
 								manga={manga}
 								key={manga.mal_id}/>
