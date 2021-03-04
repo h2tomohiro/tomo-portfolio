@@ -32,19 +32,18 @@ export const Touch = () => {
 							<MangaCard
 								manga={manga}
 								key={manga.mal_id}/>
+						// {topTouch.map(test => (
+						// 	<ModalArea
+						// 		test={test}
+						// 		key={test.mal_id}
+						// 		// buttonName="投稿する"
+						// 		// props={props}
+						// 		// modalBody="入力した内容で投稿しますか？"
+						// 		// // message={this.state.message}
+						// 		// // color={this.state.color}
+						// 	/>
 						))}
 					</nav>
-					{topTouch.map(test => (
-						<ModalArea
-							test={test}
-							key={test.mal_id}
-								// buttonName="投稿する"
-								// props={props}
-								// modalBody="入力した内容で投稿しますか？"
-								// // message={this.state.message}
-								// // color={this.state.color}
-					/>
-					))}
 				</aside>
 				<iframe
 					width="380"

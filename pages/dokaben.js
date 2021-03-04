@@ -4,6 +4,7 @@ import {useState, useEffect} from 'react';
 import {Header} from "../components/header";
 import {Footer} from "../components/footer";
 import {MangaCard} from "../components/MangaCard";
+import {ModalArea} from "../components/pop";
 
 export const Dokaben = () => {
 	const [Dokaben, SetDokaben] = useState([]);
@@ -35,12 +36,12 @@ export const Dokaben = () => {
 					</nav>
 				</aside>
 				<iframe
-						width="360"
-						height="200"
-						src="https://ext.nicovideo.jp/thumb/sm2118588"
-						scrolling="no"
-						frameBorder="0"><a href="https://www.nicovideo.jp/watch/sm2118588">ドカベン
-						OP1 ｢がんばれドカベン｣</a>
+					width="360"
+					height="200"
+					src="https://ext.nicovideo.jp/thumb/sm2118588"
+					scrolling="no"
+					frameBorder="0"><a href="https://www.nicovideo.jp/watch/sm2118588">ドカベン
+					OP1 ｢がんばれドカベン｣</a>
 				</iframe>
 			</div>
 			<Footer/>

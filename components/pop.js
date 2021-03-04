@@ -1,65 +1,38 @@
-// import React from "react";
-// import 'bootstrap/dist/css/bootstrap.css';
-// import {
-// 	Button,
-// 	Modal,
-// 	Row,
-// 	Col,
-// } from "reactstrap";
+import 'bootstrap/dist/css/bootstrap.css';
 import React, { useState } from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
-// import MessageInfo from './MessageInfo';
 
-/**
- * モーダル
- */
 export const ModalArea = ({test}) => {
-	// const modalTitle = manga;
-	// 	buttonName,
-	// 	modalBody,
-	// 	modalAction,
-	// 	message,
-	// 	color,
-	// 	buttonColor
-
 	const [modal, setModal] = useState(false);
-
 	const toggle = () => setModal(!modal);
-
 	const clicked = () => modalAction();
 
 	return (
 		<div>
 			<Button
-				outline block
-				// color={buttonColor}
+				block
 				className="mb-3 btn-sm"
+				color="primary"
+				onClick={() => setModalDefaultOpen(true)}
+				type="button"
 				onClick={toggle}
 			>
+			  Detail information
 			</Button>
 			<Modal isOpen={modal} toggle={toggle}>
 				<ModalHeader toggle={toggle}>{ test.title }</ModalHeader>
-				<ModalBody></ModalBody>
-				<figure>
-					<img
-						src={ test.title }
-						alt=""/>
-				</figure>
-				{/*<MessageInfo*/}
-				{/*	message={message}*/}
-				{/*	color={color}*/}
-				{/*/>*/}
+				<ModalBody>
+				  <figure>
+					  <img
+						  src={ test.image_url}
+						  alt=""/>
+				  </figure>
+				</ModalBody>
 				<ModalFooter>
 					<Button color="secondary"
 									className="mb-3 btn-sm"
 									onClick={toggle}>閉じる
 					</Button>
-					{/*{ !message ?*/}
-					{/*	<Button*/}
-					{/*		className="mb-3 btn-sm"*/}
-					{/*		color="success" onClick={() => {clicked()}}>実行する*/}
-					{/*	</Button>*/}
-					{/*	: null}*/}
 				</ModalFooter>
 			</Modal>
 		</div>

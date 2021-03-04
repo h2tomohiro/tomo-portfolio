@@ -1,4 +1,5 @@
 import React from 'react';
+import {ModalArea} from "./pop";
 
 export const MangaCard = ({manga}) => {
 	return (
@@ -13,6 +14,9 @@ export const MangaCard = ({manga}) => {
 				</figure>
 				<h3>{ manga.title }</h3>
 			</a>
+			<ModalArea
+				test={manga}
+			/>
 		</article>
-	);
+);
 }
