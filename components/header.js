@@ -6,7 +6,7 @@ export const Header = () => {
 
 	return (
 		<div className="page-container">
-			<h1>Love Baseball MANGA!
+			<h1 className='title'>Love Baseball MANGA!
 			</h1>
 			<img
 				src="../baseball-ball.png"

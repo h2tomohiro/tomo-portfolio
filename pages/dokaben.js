@@ -34,14 +34,17 @@ export const Dokaben = () => {
 						))}
 					</nav>
 				</aside>
-				<iframe
+			  <div className="video">
+					<h3>This is a Main theme song!<br/>Check it out!</h3>
+			   	  <iframe
 					width="360"
 					height="200"
 					src="https://ext.nicovideo.jp/thumb/sm2118588"
 					scrolling="no"
 					frameBorder="0"><a href="https://www.nicovideo.jp/watch/sm2118588">ドカベン
 					OP1 ｢がんばれドカベン｣</a>
-				</iframe>
+				  </iframe>
+			  </div>
 			</div>
 			<Footer/>
 		</>

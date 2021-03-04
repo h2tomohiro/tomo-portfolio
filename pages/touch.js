@@ -34,6 +34,8 @@ export const Touch = () => {
 						))}
 					</nav>
 				</aside>
+				<div className="video">
+					<h3>This is a Main theme song!<br/>Check it out!</h3>
 				<iframe
 					width="380"
 					height="220"
@@ -41,6 +43,7 @@ export const Touch = () => {
 					scrolling="no"
 					frameBorder="0">
 				</iframe>
+				</div>
 			</div>
 			<Footer/>
 		</>
