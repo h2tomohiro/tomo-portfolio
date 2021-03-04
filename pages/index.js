@@ -10,7 +10,7 @@ export const Home = () => {
 		<>
 			<Head>
 				<title>I love Baseball "MANGA"</title>
-				<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet" />
+				<script src="https://cdnjs.cloudflare.com/ajax/libs/reactstrap/6.0.1/reactstrap.min.js"></script>
 			</Head>
 			<div className="page-container">
 				<Header/>

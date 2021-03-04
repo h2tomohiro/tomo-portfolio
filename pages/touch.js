@@ -4,6 +4,7 @@ import {useState, useEffect} from 'react';
 import {Header} from '../components/header';
 import {Footer} from "../components/footer";
 import {MangaCard} from "../components/MangaCard";
+import {ModalArea} from "../components/pop";
 
 export const Touch = () => {
 	const [topTouch, SetTouch] = useState([]);
@@ -33,6 +34,17 @@ export const Touch = () => {
 								key={manga.mal_id}/>
 						))}
 					</nav>
+					{topTouch.map(test => (
+						<ModalArea
+							test={test}
+							key={test.mal_id}
+								// buttonName="投稿する"
+								// props={props}
+								// modalBody="入力した内容で投稿しますか？"
+								// // message={this.state.message}
+								// // color={this.state.color}
+					/>
+					))}
 				</aside>
 				<iframe
 					width="380"
