@@ -1,5 +1,5 @@
 import React from 'react';
-import {ModalArea} from "./pop";
+import {CardModal} from "./CardModal";
 
 export const MangaCard = ({manga}) => {
 	return (
@@ -15,7 +15,7 @@ export const MangaCard = ({manga}) => {
 						alt=""/>
 				</figure>
 			</a>
-			<ModalArea
+			<CardModal
 				test={manga}
 			/>
 		</article>

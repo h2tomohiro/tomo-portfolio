@@ -8,21 +8,18 @@ import {MangaCard} from "../components/MangaCard";
 export const Touch = () => {
 	const [topTouch, SetTouch] = useState([]);
 
-	const GetTouchAnime = async () => {
+	const GetTouch = async () => {
 		const temp = await fetch('https://api.jikan.moe/v3/search/manga?q=touch&page=1&limit=2')
 			.then(res => res.json());
 		SetTouch(temp.results.slice(1, 2));
 	}
 
 	useEffect(() => {
-		GetTouchAnime();
+		GetTouch();
 	}, []);
 
 	return (
 		<>
-			<Head>
-				<title>I love Baseball MANGA!</title>
-			</Head>
 			<div className="page-container">
 				<Header/>
 				<aside>

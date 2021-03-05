@@ -3,11 +3,11 @@ import React, { useState } from 'react';
 import {useRouter} from 'next/router';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 
-export const ModalArea = ({test}) => {
+export const CardModal = ({test}) => {
 	const [modal, setModal] = useState(false);
 	const toggle = () => setModal(!modal);
-	const clicked = () => modalAction();
 	const router = useRouter();
+
 	return (
 		<div>
 			<div className="mb-2">

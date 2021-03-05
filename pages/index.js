@@ -8,10 +8,6 @@ export const Home = () => {
 	const router = useRouter();
 	return (
 		<>
-			<Head>
-				<title>I love Baseball "MANGA"</title>
-				<script src="https://cdnjs.cloudflare.com/ajax/libs/reactstrap/6.0.1/reactstrap.min.js"></script>
-			</Head>
 			<div className="page-container">
 				<Header/>
 				<div className={styles.main}>
