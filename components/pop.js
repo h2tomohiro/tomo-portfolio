@@ -23,10 +23,14 @@ export const ModalArea = ({test}) => {
 			</Button>
 			</div>
 			<Modal isOpen={modal} toggle={toggle}>
-				<ModalHeader toggle={toggle}>{ test.title }</ModalHeader>
-				<ModalBody class="modal-css">
+				<ModalHeader toggle={toggle} style={{
+					backgroundColor: 'black',
+				}}>{ test.title }</ModalHeader>
+				<ModalBody class="modal-css" style={{
+					backgroundColor: 'black',
+				}}>
 				  <figure>
-					  <img
+					  <img class="modal-image"
 						  src={ test.image_url}
 							key={ test.mal_id }
 						  alt=""/>
@@ -44,7 +48,9 @@ export const ModalArea = ({test}) => {
 						</p>
 					</figure>
 				</ModalBody>
-				<ModalFooter>
+				<ModalFooter style={{
+					backgroundColor: 'black',
+				}}>
 					<Button
 						onClick={() => router.push(test.url)}
 						key={test.mal_id}
